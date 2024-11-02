@@ -1,0 +1,39 @@
+bot:
+  prefix: "~"
+
+database:
+  filename: "member_activity_data.sqlite"
+
+guilds:
+  '6969696969696969': # guild id
+    channels_to_scan:
+      - 1283249633438732368
+      - 1283514660087267359
+      - 1171626983030018068
+      - 1171626985777287178
+      - 1271236228066443305
+      - 1284643935762911242
+      - 1300680224844812309
+      - 1171626997575852112
+      - 1171626992152617111 # channel ids
+      - 1198059886274158692
+      - 1265507382692417650
+      - 1245886177345667084
+      - 1221621439765938296
+      - 1171626987333374063
+      - 1171626984338624563
+      - 1171627018400567316
+    authorized_ids:
+      - 890302656025882654 # you
+    activity_check:
+      message: "React to this message within 48 hours to confirm your activity."
+      emoji: "✅"
+      duration_hours: 48 
+    rate_limit:
+      rate: 45 # this is around the max to avoid getting throttled
+      per: 1 # second
+    members_per_page: 10 # show category pagination
+    concurrency_limit: 5 # concurrent channels for scanning
+    max_messages_per_channel: 5000 # scan this many msgs in a channel
+    days_to_scan: 900 # dont scan things older than this many days
+    ignore_role_id: 1284015317613416531 # ignore all messages from folks with this role id
